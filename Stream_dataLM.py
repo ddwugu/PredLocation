@@ -21,11 +21,11 @@ def main():
             prediksi_lokasi = predict_location(x1, x2)
             
             if prediksi_lokasi <= 0: # titik nol
-                suspect_loct = 'Pipa Aman, Tidak Terdapat Fluida yang Mengalir'
+                suspect_loct = 'It is safe that there is no fluid flowingr'
             elif prediksi_lokasi >= 26.38: # total panjang trunkline
-                suspect_loct = 'Tidak Terdapat Kebocoran'
+                suspect_loct = 'Safe, there are no leaks'
             else:
-                suspect_loct = f'Terjadi kebocoran di titik {prediksi_lokasi} KM'
+                suspect_loct = f'Estimated leak location {prediksi_lokasi} KM'
             st.success(suspect_loct)
         except Exception as e:
             st.error(f"Error predicting location: {e}")
