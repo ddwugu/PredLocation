@@ -7,7 +7,8 @@ def predict_location(x1, x2):
 
 # Main Streamlit app
 def main():
-    st.title('Pertamina Field Jambi-BJG-TPN')
+    st.title('Pertamina Field')
+    st.subheader('FOL (Finding Oil Losses')
     st.subheader('Prediksi Lokasi Kebocoran Line BJG-TPN Regresi Model')
 
     Titik_1_PSI = st.text_input('Input Pressure di titik 1 (PSI)')
